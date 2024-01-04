@@ -1,11 +1,14 @@
+#!/usr/bin/python3
+
 def magic_calculation(a, b):
-    add = __import__('magic_calculation_102', globals(), locals(), ['add'], 0).__dict__['add']
-    sub = __import__('magic_calculation_102', globals(), locals(), ['sub'], 0).__dict__['sub']
+    """Match bytecode provided by Holberton School."""
+    from magic_calculation_102 import add, sub
 
     if a < b:
         c = add(a, b)
-        for i in range(4, 7):
+        for i in range(4, 6):
             c = add(c, i)
-        return c
+        return (c)
+
     else:
-        return sub(a, b)
+        return(sub(a, b))
